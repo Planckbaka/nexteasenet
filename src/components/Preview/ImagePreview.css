@@ -1,0 +1,70 @@
+.image-preview {
+  width: 100%;
+  min-height: 300px;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  transition: all var(--transition-normal);
+}
+
+.image-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.image-preview.empty {
+  border: 2px dashed var(--gray-300);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-preview.empty p {
+  color: var(--gray-500);
+  font-size: 1.1rem;
+}
+
+.preview-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--gray-100);
+  min-height: 250px;
+  position: relative;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.preview-container:hover .preview-image {
+  transform: scale(1.02);
+}
+
+.image-info {
+  padding: 1.25rem;
+  background-color: white;
+  border-top: 1px solid var(--gray-200);
+}
+
+.file-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+  color: var(--gray-800);
+}
+
+.file-size {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
